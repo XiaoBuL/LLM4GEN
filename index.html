@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation">
+  <meta name="keywords" content="Text-to-Image Diffusion Models, Large Language Models, Text-Image Alignment">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</title>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="xxx">Mushui Liu</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="xxx">Yuhang Ma<sup>2</sup></a>=,</span>
+            <!-- <span class="author-block">
+              <a href="https://www.linkedin.com/in/yunjey-choi-27b347175/?originalSubdomain=kr">Yunjey Choi</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/gayoung-lee-0824548a/?originalSubdomain=kr">Gayoung Lee</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://vilab.yonsei.ac.kr/member">Youngjung Uh</a><sup>1</sup>,
+            </span> -->
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+            <span class="author-block"><sup>2</sup>Netease Fuxi AI Lab</span>
+          </div>
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">* Equal contribution</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/pdf/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>-->
+
+              <span class="link-block"> 
+                <a href="xxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="xxx"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+
+
+          <p>
+            Diffusion Models have exhibited substantial success in text-to-image generation.
+            However, they often encounter challenges when dealing with complex and dense prompts that involve multiple objects, attribute binding, and long descriptions. 
+            This paper proposes a framework called <b>LLM4GEN</b>, which enhances the semantic understanding ability of text-to-image diffusion models by leveraging the 
+            semantic representation of Large Language Models (LLMs).
+            Through a specially designed Cross-Adapter Module (CAM)
+             that combines the original text features of text-to-image models with LLM features,
+              LLM4GEN can be easily incorporated into various diffusion models as a plug-and-play component and enhances text-to-image generation.
+               Additionally, to facilitate the complex and dense prompts semantic understanding, we develop a LAION-refined dataset, consisting 
+               of 1 million (M) text-image pairs with improved image descriptions. We also introduce DensePrompts which contains 7,000 
+               dense prompts to provide a comprehensive evaluation for the text-to-image generation task. With just 10% of the training 
+               data required by recent ELLA, LLM4GEN significantly improves the semantic alignment of SD1.5 and SDXL, demonstrating 
+               increases of 7.69% and 9.60% in color on T2I-CompBench, respectively. The extensive experiments on DensePrompts also 
+               demonstrate that LLM4GEN surpasses existing state-of-the-art models in terms of sample quality, image-text alignment, 
+               and human evaluation. The model and dataset will be released to the community later.
+</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <section class="hero teaser">
+
+  </section>
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+    @misc{jeong2024visual,
+      title={Visual Style Prompting with Swapping Self-Attention}, 
+      author={Jaeseok Jeong and Junho Kim and Yunjey Choi and Gayoung Lee and Youngjung Uh},
+      year={2024},
+      eprint={2402.12974},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}}
+    </code></pre>
+  </div>
+</section> -->
+
+
+</body>
+</html>
