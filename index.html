@@ -1,45 +1,85 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="description"
-        content="LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation">
-  <meta name="keywords" content="Text-to-Image Diffusion Models, Large Language Models, Text-Image Alignment">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation">
+    <meta name="keywords" content="Text-to-Image Diffusion Models, Large Language Models, Text-Image Alignment">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</title>    
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/87dc3e863a.js" crossorigin="anonymous"></script>
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    
+    <script src="https://dorverbin.github.io/refnerf/js/video_comparison.js"></script>
+    <link rel="stylesheet" href="./select.css">
   <script>
-    window.dataLayer = window.dataLayer || [];
+  
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
+  
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadMoreBtn = document.querySelector('.load-more');
+      const hideRowsBtn = document.querySelector('.hide-rows');
+    
+      loadMoreBtn.addEventListener('click', function () {
+        document.querySelectorAll('.hidden-rows').forEach(function (row) {
+          row.style.display = 'flex'; 
+        });
+        loadMoreBtn.style.display = 'none';
+        hideRowsBtn.style.display = 'inline-block';
+      });
+    
+      hideRowsBtn.addEventListener('click', function () {
+        document.querySelectorAll('.hidden-rows').forEach(function (row) {
+          row.style.display = 'none';
+        });
+        hideRowsBtn.style.display = 'none';
+        loadMoreBtn.style.display = 'inline-block';
+      });
+    });
+    
   </script>
-
+  
+  <script>
+  window.MathJax = {
+  tex: {
+  inlineMath: [['$', '$'], ['\\(', '\\)']]
+  },
+  svg: {
+  fontCache: 'global'
+  }
+  };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/bulma.min.css">
+  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/twentytwenty.css">
+  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/index.css">
+  <link rel="icon" href="./images/xd.png" type="image/x-icon" />
+  
+  
+  <script src="https://xdimlab.github.io/hugs_website/js/jquery-3.2.1.min.js"></script>
+  <script src="https://xdimlab.github.io/hugs_website/js/jquery.event.move.js"></script>
+  <script src="https://xdimlab.github.io/hugs_website/js/jquery.twentytwenty.js"></script>
+  <script src="https://xdimlab.github.io/hugs_website/js/bulma-carousel.min.js"></script>
+  <script src="https://xdimlab.github.io/hugs_website/js/bulma-slider.min.js"></script>
+  <script src="https://xdimlab.github.io/hugs_website/js/fontawesome.all.min.js"></script>
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  </head>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-</head>
 
 <body>
 
@@ -48,12 +88,12 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</h1>
+          <h2 class="title is-2 publication-title">LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="xxx">Mushui Liu</a><sup>1,2</sup>,</span>
+              <a href="xxx">Mushui Liu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="xxx">Yuhang Ma<sup>2</sup></a>=,</span>
+              <a href="xxx">Yuhang Ma</a><sup>2</sup>,</span>
             <!-- <span class="author-block">
               <a href="https://www.linkedin.com/in/yunjey-choi-27b347175/?originalSubdomain=kr">Yunjey Choi</a><sup>2</sup>,
             </span>
@@ -64,7 +104,6 @@
               <a href="https://vilab.yonsei.ac.kr/member">Youngjung Uh</a><sup>1</sup>,
             </span> -->
           </div>
-
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Zhejiang University,</span>
             <span class="author-block"><sup>2</sup>Netease Fuxi AI Lab</span>
@@ -75,29 +114,18 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2403.16481" target="_blank" rel="noopener noreferrer"
+                       class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                          <i class="fas fa-file-pdf" style="color: orangered"></i>
+                      </span>
+                      <span>ArXiv</span>
+                    </a>
                   </span>
-                  <span>Paper</span>
-                </a>
-              </span>-->
-
-              <span class="link-block"> 
-                <a href="xxx"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="xxx"
+                <a 
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -131,7 +159,6 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-
 
           <p>
             Diffusion Models have exhibited substantial success in text-to-image generation.
