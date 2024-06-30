@@ -1,178 +1,189 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="description"
-          content="LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation">
-    <meta name="keywords" content="Text-to-Image Diffusion Models, Large Language Models, Text-Image Alignment">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</title>    
-    <!-- bootstrap -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- icon -->
-    <script src="https://kit.fontawesome.com/87dc3e863a.js" crossorigin="anonymous"></script>
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    
-    <script src="https://dorverbin.github.io/refnerf/js/video_comparison.js"></script>
-    <link rel="stylesheet" href="./select.css">
-  <script>
-  
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Offcial website of 'LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation'">
+  <meta name="keywords" content="Text-to-Image Diffusion Models, Large Language Models, Text-Image Alignment">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-    document.addEventListener('DOMContentLoaded', function () {
-      const loadMoreBtn = document.querySelector('.load-more');
-      const hideRowsBtn = document.querySelector('.hide-rows');
-    
-      loadMoreBtn.addEventListener('click', function () {
-        document.querySelectorAll('.hidden-rows').forEach(function (row) {
-          row.style.display = 'flex'; 
-        });
-        loadMoreBtn.style.display = 'none';
-        hideRowsBtn.style.display = 'inline-block';
-      });
-    
-      hideRowsBtn.addEventListener('click', function () {
-        document.querySelectorAll('.hidden-rows').forEach(function (row) {
-          row.style.display = 'none';
-        });
-        hideRowsBtn.style.display = 'none';
-        loadMoreBtn.style.display = 'inline-block';
-      });
-    });
-    
-  </script>
-  
-  <script>
-  window.MathJax = {
-  tex: {
-  inlineMath: [['$', '$'], ['\\(', '\\)']]
-  },
-  svg: {
-  fontCache: 'global'
-  }
-  };
-  </script>
-  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-  
-  
-  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/bulma.min.css">
-  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/twentytwenty.css">
-  <link rel="stylesheet" href="https://xdimlab.github.io/hugs_website/css/index.css">
-  <link rel="icon" href="./images/xd.png" type="image/x-icon" />
-  
-  
-  <script src="https://xdimlab.github.io/hugs_website/js/jquery-3.2.1.min.js"></script>
-  <script src="https://xdimlab.github.io/hugs_website/js/jquery.event.move.js"></script>
-  <script src="https://xdimlab.github.io/hugs_website/js/jquery.twentytwenty.js"></script>
-  <script src="https://xdimlab.github.io/hugs_website/js/bulma-carousel.min.js"></script>
-  <script src="https://xdimlab.github.io/hugs_website/js/bulma-slider.min.js"></script>
-  <script src="https://xdimlab.github.io/hugs_website/js/fontawesome.all.min.js"></script>
+  <title>Character-Adapter</title>
 
-  </head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MRQC0YFE17');
+</script>
 
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
 
 <body>
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h2 class="title is-2 publication-title">LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation</h2>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://xiaobul.github.io/">Mushui Liu</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://github.com/YUHANG-Ma">Yuhang Ma</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a>Zeng Zhao</a><sup>2</sup>,</span>            
-            <!-- <span class="author-block">
-              <a href="https://www.linkedin.com/in/yunjey-choi-27b347175/?originalSubdomain=kr">Yunjey Choi</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.linkedin.com/in/gayoung-lee-0824548a/?originalSubdomain=kr">Gayoung Lee</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://vilab.yonsei.ac.kr/member">Youngjung Uh</a><sup>1</sup>,
-            </span> -->
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Zhejiang University,</span>
-            <span class="author-block"><sup>2</sup>Fuxi AI Lab, Netease Inc.</span>
-          </div>
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">* Equal contribution</span>
-          </div> -->
+  <style>
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  </style>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-                  <span class="link-block">
-                    <a target="_blank" rel="noopener noreferrer"
-                       class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                          <i class="fas fa-file-pdf" style="color: orangered"></i>
-                      </span>
-                      <span>ArXiv</span>
-                    </a>
-                  </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a 
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code (Coming soon)</span>
-                  </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
-            </div>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <!-- <a class="navbar-item" href="">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a> -->
 
-          </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://xiaobul.github.io/LLM4GEN/">
+              LLM4GEN (Coming Soon)
+            </a>
+            <a class="navbar-item">
+              Character-Diffusion
+            </a>
+            
+        </div>
+          
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="./images/intro-1.jpg" alt="teaser" />
-        <h2 class="subtitle has-text-centered">
-            Image generation comparison using short and dense prompts across SDXL, Playground v2, PixArt-alpha, and our proposed LLM4GENSDXL. The colored text denotes critical entities or attributes.</h2>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        
+        <div class="container has-text-centered">
+          
+          <h1 class="title is-1 publication-title">
+            LLM4GEN: Leveraging Semantic Representation of LLMs for Text-to-Image Generation
+          </h1>
+          
+          <div class="is-size-5 publication-authors">
+            <div class="author-block">
+              <a href="https://xiaobul.github.io/"> Mushui Liu</a><sup>1</sup>,
+            </div>
+            <div class="author-block">
+              Yuhang Ma</a><sup>2</sup>,
+            </div>
+            <div class="author-block">
+              Xinfeng Zhang </a><sup>2</sup>,
+            </div>
+            <div class="author-block">
+              <a href="https://zhenyangcs.github.io/"> Zhen yang </a><sup>1</sup>,
+            </div>
+            <div class="author-block">
+              Zeng zhao</a><sup>2</sup>,
+            </div>
+            <div class="author-block">
+              Zhipeng Hu</a><sup>2</sup>,
+            </div>
+            <div class="author-block">
+              Bai Liu</a><sup>2</sup>
+            </div>
+            <div class="author-block">
+              Changjie Fan</a><sup>2</sup>,
+            </div>
+            
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup> Zhejiang University </span>
+            <span class="author-block"><sup>2</sup> Fuxi AI Lab, NetEase Inc. </span>
+            
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2406.16537" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Arxiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/IP-Consistency/LLM4GEN"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <img src="./images/intro-1.jpg" alt="Teaser Image" width="100%">
+        <h2 class="subtitle has-text-centered">
+            Image generation comparison using short and dense prompts across SDXL, Playground v2, PixArt-alpha, and our proposed LLM4GENSDXL. The colored text denotes critical entities or attributes.</h2>
+        </h2>
+      </div>
+    </div>
+  </section>
 
-          <p>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+
+          <div class="content has-text-justified">
+            <p>
             Diffusion Models have exhibited substantial success in text-to-image generation.
             However, they often encounter challenges when dealing with complex and dense prompts that involve multiple objects, attribute binding, and long descriptions. 
             This paper proposes a framework called <b>LLM4GEN</b>, which enhances the semantic understanding ability of text-to-image diffusion models by leveraging the 
@@ -186,30 +197,135 @@
                data required by recent ELLA, LLM4GEN significantly improves the semantic alignment of SD1.5 and SDXL, demonstrating 
                increases of 7.69% and 9.60% in color on T2I-CompBench, respectively. The extensive experiments on DensePrompts also 
                demonstrate that LLM4GEN surpasses existing state-of-the-art models in terms of sample quality, image-text alignment, 
-               and human evaluation. The model and dataset will be released to the community later.
-</p>
+               and human evaluation. The model and dataset will be released to the community later.            </p>
+          </div>
         </div>
       </div>
+      <!--/ Abstract. -->
+
+  </section>
+
+  <section class="method">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Method</h2>
+
+          <div class="content has-text-justified">
+            <p>
+The proposed LLM4GEN, which contains a Cross-Adapter Module (CAM) and the UNet, is illustrated in Fig 1. (a). In this paper, we explore stable diffusion as the base text-to-image diffusion model, and the vanilla text encoder is from CLIP. LLM4GEN leverages the strong capability of LLMs to assist in text-to-image generation. The CAM extracts the representation of a given prompt via the combination of LLM and CLIP text encoder. The fused text embedding is enhanced by leveraging the pre-trained knowledge of LLMs through the simple yet effective CAM. By feeding the fused text embedding, LLM4GEN iteratively denoises the latent vectors with the UNet and decodes the final vector into an image with the VAE. 
+          </div>
+
+          <div class="container is-max-desktop">
+            <img src="./images/1.png" alt="Image0" width="100%">
+          </div>
+
+        </div>
+      </div>
+      <!--/ Abstract. -->
     </div>
-    <!--/ Abstract. -->
-</section>
+  </section>
 
 
-<!-- <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
-    @misc{jeong2024visual,
-      title={Visual Style Prompting with Swapping Self-Attention}, 
-      author={Jaeseok Jeong and Junho Kim and Yunjey Choi and Gayoung Lee and Youngjung Uh},
-      year={2024},
-      eprint={2402.12974},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}}
-    </code></pre>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Construction</h2>
+          <div class="container is-max-desktop">
+            <img src="./images/dataset.png" alt="Image0" width="100%">
+          </div>
+        </div>
+      </div>
+  </div class="section">
+
+
+      <!--/ Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Visulization Compared with Previous Work</h2>
+
+          <div class="container is-max-desktop">
+            <img src="./images/result1.png" alt="Image0" width="100%">
+          </div>
+            Experimental results on MS-COCO and user study.
+          <div class="content has-text-justified">
+            <p>
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+  </section>
+
+  
+      <!--/ Abstract. -->
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Visulization Compared with Previous Work</h2>
+
+          <div class="container is-max-desktop">
+            <img src="./images/7.png" alt="Image0" width="100%">
+          </div>
+                More visualization results
+            <div class="content has-text-justified">
+            <p>
+
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+  </section>
+
+<!--   </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container content is-max-desktop">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{ma2024characteradapter,
+        title={Character-Adapter: Prompt-Guided Region Control for High-Fidelity Character Customization}, 
+        author={Yuhang Ma and Wenting Xu and Jiji Tang and Qinfeng Jin and Rongsheng Zhang and Zeng Zhao and Changjie Fan and Zhipeng Hu},
+        year={2024},
+        eprint={2406.16537},
+        archivePrefix={arXiv},
+        primaryClass={id='cs.CV' full_name='Computer Vision and Pattern Recognition' is_active=True alt_name=None in_archive='cs' is_general=False description='Covers image processing, computer vision, pattern recognition, and scene understanding. Roughly includes material in ACM Subject Classes I.2.10, I.4, and I.5.'}
+  }</code></pre>
   </div>
-</section> -->
+  </section>
+ -->
 
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          The website template is borrowed from InstantID.
+        </p>
+      </div>
+    </div>
+  </footer>
 
+  <script type="text/javascript" src="./static/slick/slick.js"></script>
 </body>
+
 </html>
+
+        
